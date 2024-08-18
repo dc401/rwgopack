@@ -1,6 +1,15 @@
 # rwgopack
 Example Linux based packer for ELF binaries that uses ZLib to compress and then XOR cipher single byte key the payload while creating a self unpacking binary. In the example code you can use an GCC compiled edition of a C hello world source and have that executed in a "packed" version as a wrapper using the above mechanisms.
 
+## Disclaimer
+For educational purposes only. No expressed warranty.
+
+## How to make this stealthier initial EDR IOC evasion
+1. Lower the entropy value by using simple encodings
+2. Include in the build positive keywords or known metadata
+3. Keep the size large enough usually >=1MB
+4. Dont strip out symbols or flags --- sure, you can try to stop the RE work but you don't want it to trigger to start with, right?
+
 ## Why another packer?
 I wrote one just because I wanted to figure out what the best mechanism of self-execution would be to prepend the executable after which is the harder part. We can take inspiration from my last obfuscation pet project generating [python payload](https://github.com/dc401/py-obfuscation-payloadgen). The name is the abbreviated for "RW for [Robin Williams](https://www.imdb.com/name/nm0000245/)" the late actor because it's just clowning around on this project (his role in [Patch Adams](https://www.imdb.com/title/tt0129290/))
 
