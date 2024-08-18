@@ -1,3 +1,7 @@
+// Dennis Chow dchow[AT]xtecsystems.com
+// 2024-Aug-18
+// No expressed warranty of any kind. Educational purposes only.
+// Find me at dwchow.medium.com
 package main
 
 import (
